@@ -2,10 +2,11 @@ import json
 import zmq
 from decimal import Decimal
 
+
 class MT4Bridge:
     """
     A bridge class to facilitate communication between Python and MetaTrader 4 (MT4) using ZeroMQ.
-    
+
     This class allows Python scripts to send requests to an MT4 Expert Advisor (EA) and receive responses.
     Supported operations include fetching historical data, current tick information, data across all timeframes,
     and indicator values. The communication follows a request-reply (REQ/REP) pattern.
@@ -55,7 +56,7 @@ class MT4Bridge:
         except zmq.ZMQError as e:
             print(f"[Error] Failed to send request: {e}")
             return ""
-        
+
         try:
             reply = self.socket.recv_string()
             print(f"[Python] Received reply: {reply}")
@@ -150,7 +151,7 @@ class MT4Bridge:
             return None
 
         # Check if the response contains an error
-        if isinstance(data, dict) and 'error' in data:
+        if isinstance(data, dict) and "error" in data:
             print(f"[Error] EA returned error: {data['error']}")
             return None
 

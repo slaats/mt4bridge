@@ -23,6 +23,10 @@ var/
 .installed.cfg
 *.egg
 
+# Test Coverage
+coverage.xml
+.coverage
+
 # IDEs
 .vscode/
 
