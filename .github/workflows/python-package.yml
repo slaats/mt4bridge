@@ -37,11 +37,11 @@ jobs:
         pip install setuptools wheel build
         pip install -r requirements.txt
 
-    - name: Build the package using build
+    - name: Build the package
       run: python -m build
 
-    - name: Install the built package
-      run: pip install dist/*.whl
+    - name: Install the package to test
+      run: pip install .
 
     - name: Install coverage.py and Flake8
       run: pip install coverage flake8
