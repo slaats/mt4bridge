@@ -7,5 +7,5 @@ exclude =
     dist,
     venv
 extend-ignore =
-    E203,  # Whitespace before ':'
-    W503,  # Line break before binary operator
+    E203,
+    W503
