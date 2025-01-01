@@ -18,7 +18,7 @@ setup(
         "Operating System :: OS Independent",
     ],
     packages=find_packages(),
-    python_requires="=3.12",
+    python_requires="==3.12",
     install_requires=[
         "pyzmq>=22.0.0",
     ],
