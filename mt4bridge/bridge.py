@@ -124,11 +124,10 @@ class MT4Bridge:
         Args:
             symbol (str): The trading symbol (e.g., "EURUSD", "XAUUSD.a").
             timeframe (str): The timeframe for the indicator (e.g., "M1", "H1", "D1").
-            indicator_name (str): The name of the indicator (e.g., "MA" for Moving
-                Average).
+            indicator_name (str): The name of the indicator (e.g., "SMA", "EMA",
+                "MACD").
             params (str): A comma-separated string of parameters required by the
-                indicator (e.g., "14,0,1,0" for MA period=14, shift=0, method=1,
-                applied_price=0).
+                indicator (e.g., "14" for SMA period=14).
             bars (int): The number of indicator values to retrieve.
 
         Returns:
